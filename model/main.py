@@ -5,6 +5,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score, classification_report
 import pickle
 
+
 def create_model(data):
         X = data.drop(['diagnosis'], axis=1)
         y = data['diagnosis']
