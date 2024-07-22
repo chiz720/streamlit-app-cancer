@@ -5,7 +5,7 @@ import pickle
 import numpy as np
 
 def get_clean_data():
-    data = pd.read_csv("data\\data.csv")
+    data = pd.read_csv("data/data.csv")
     data = data.drop(['id', 'Unnamed: 32'], axis=1)
     data['diagnosis'] = data['diagnosis'].map({'M': 1, 'B': 0})
     return data
@@ -165,7 +165,7 @@ def main():
         st.plotly_chart(radar_chart)
     with col2:
         add_predictions(input_data) 
-        
+
 
 if __name__ == '__main__':
     main()
